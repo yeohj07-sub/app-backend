@@ -8,14 +8,26 @@ generator client {
 }
 
 model User {
-  id        Int       @id @default(autoincrement())
-  firstName String
+  id Int @id @default(autoincrement())
+
+  mentor Boolean
+
+  username    String  @unique
+  password    String
+  name        String
+  birth       String
+  gender      Boolean
+  phoneNumber String
+
+  counselPrice Int?
+  major        String?
+  field        String?
+
+  bio    String?
+  avatar String?
+
+  firstName String?
   lastName  String?
-  username  String    @unique
-  email     String    @unique
-  password  String
-  bio       String?
-  avatar    String?
   photos    Photo[]
   likes     Like[]
   followers User[]    @relation("FollowRelation")
