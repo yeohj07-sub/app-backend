@@ -10,14 +10,14 @@ generator client {
 model User {
   id Int @id @default(autoincrement())
 
-  mentor Boolean
+  mentor Boolean?
 
-  username    String  @unique
+  username    String @unique
   password    String
   name        String
   birth       String
-  gender      Boolean
-  phoneNumber String
+  gender      String
+  phoneNumber String @unique
 
   counselPrice Int?
   major        String?
