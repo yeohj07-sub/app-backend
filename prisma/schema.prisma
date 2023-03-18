@@ -10,7 +10,7 @@ generator client {
 model User {
   id Int @id @default(autoincrement())
 
-  mentor Boolean?
+  mentor Boolean
 
   username    String @unique
   password    String
