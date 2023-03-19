@@ -3,17 +3,30 @@ import { gql } from "apollo-server";
 export default gql`
   type User {
     id: Int!
-    firstName: String!
-    lastName: String
+
+    mentor: Boolean!
+
     username: String!
-    email: String!
-    createdAt: String!
-    updatedAt: String!
+    name: String!
+    birth: String!
+    gender: String!
+    phoneNumber: String!
+
+    counselPrice: Int
+    major: String
+    field: String
+
     bio: String
     avatar: String
+
+    firstName: String!
+    lastName: String
     photos: [Photo]
-    following: [User]
+    likes: [Like]
     followers: [User]
+    following: [User]
+    createdAt: String!
+    updatedAt: String!
     totalFollowing: Int!
     totalFollowers: Int!
     isMe: Boolean!
