@@ -2,13 +2,13 @@ import client from "../../client";
 
 export default {
   Mutation: {
-    existUsername: async (_, { username }) => {
+    existPhoneNumber: async (_, { phoneNumber }) => {
       try {
         const existingUser = await client.user.findFirst({
           where: {
             OR: [
               {
-                username,
+                phoneNumber,
               },
             ],
           },
@@ -16,7 +16,7 @@ export default {
         if (existingUser) {
           return {
             ok: false,
-            error: "이미 사용중인 아이디입니다.",
+            error: "이미 사용중인 전화번호입니다.",
           };
         }
         return {
