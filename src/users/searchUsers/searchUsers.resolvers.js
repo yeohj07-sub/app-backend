@@ -5,7 +5,7 @@ export default {
     searchUsers: async (_, { keyword }) =>
       client.user.findMany({
         where: {
-          username: {
+          name: {
             startsWith: keyword.toLowerCase(),
           },
         },
