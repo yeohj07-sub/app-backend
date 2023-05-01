@@ -6,7 +6,7 @@ import { uploadToS3 } from "../../shared/shared.utils";
 
 const resolverFn = async (
   _,
-  { firstName, lastName, username, email, password: newPassword, bio, avatar },
+  { firstName, lastName, username, password: newPassword, bio, avatar },
   { loggedInUser }
 ) => {
   let avatarUrl = null;
@@ -33,7 +33,6 @@ const resolverFn = async (
       firstName,
       lastName,
       username,
-      email,
       bio,
       ...(uglyPassword && { password: uglyPassword }),
       ...(avatarUrl && { avatar: avatarUrl }),
