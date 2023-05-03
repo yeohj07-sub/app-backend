@@ -33,8 +33,8 @@ const resolverFn = async (
       firstName,
       lastName,
       username,
-      bio,
       ...(uglyPassword && { password: uglyPassword }),
+      bio,
       ...(avatarUrl && { avatar: avatarUrl }),
     },
   });
