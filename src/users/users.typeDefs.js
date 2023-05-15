@@ -12,7 +12,8 @@ export default gql`
     gender: String!
     phoneNumber: String!
 
-    counselPrice: Int
+    counselPriceLow: Int
+    counselPriceHigh: Int
     major: String
     field: String
 
