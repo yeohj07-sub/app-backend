@@ -19,13 +19,17 @@ model User {
   gender      String
   phoneNumber String @unique
 
-  counselPriceLow  Int?
-  counselPriceHigh Int?
-  major            String?
-  field            String?
+  counselPriceLow     Int?
+  counselPriceHigh    Int?
+  university          String?
+  major               String?
+  field               String?
+  certificationStatus String?
 
-  bio    String?
-  avatar String?
+  bio         String?
+  avatar      String?
+  certificate String?
+  studentID   String?
 
   firstName String?
   lastName  String?
